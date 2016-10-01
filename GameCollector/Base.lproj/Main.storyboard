@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="dE8-OX-B9V">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pN1-c7-cGt">
                             <connections>
-                                <segue destination="BYs-KD-271" kind="show" id="Pjy-zL-gCo"/>
+                                <segue destination="BYs-KD-271" kind="show" identifier="gameSegue" id="Pjy-zL-gCo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,15 +75,24 @@
                                     <action selector="addTapped:" destination="BYs-KD-271" eventType="touchUpInside" id="piA-k6-chk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-zE-Q8A">
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="BYs-KD-271" eventType="touchUpInside" id="ya9-HW-gaP"/>
+                                    <action selector="deleteTapped:" destination="BYs-KD-271" eventType="touchUpInside" id="uAQ-F1-iry"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="blp-i1-hNa" firstAttribute="width" secondItem="Aq6-LD-oLp" secondAttribute="width" id="0If-41-LBy"/>
+                            <constraint firstItem="s1m-zE-Q8A" firstAttribute="top" secondItem="8qh-yy-lQa" secondAttribute="bottom" constant="8" id="7Ns-Q1-aBY"/>
                             <constraint firstItem="8qh-yy-lQa" firstAttribute="centerX" secondItem="OOh-Rr-fXW" secondAttribute="centerX" id="8rR-0h-t75"/>
                             <constraint firstItem="blp-i1-hNa" firstAttribute="centerX" secondItem="OOh-Rr-fXW" secondAttribute="centerX" id="GhH-bB-J53"/>
                             <constraint firstItem="Aq6-LD-oLp" firstAttribute="centerX" secondItem="OOh-Rr-fXW" secondAttribute="centerX" id="L9u-d4-H42"/>
                             <constraint firstItem="blp-i1-hNa" firstAttribute="top" secondItem="Aq6-LD-oLp" secondAttribute="bottom" constant="34" id="c8x-Pm-Vz8"/>
                             <constraint firstItem="Aq6-LD-oLp" firstAttribute="top" secondItem="LvD-JJ-vRS" secondAttribute="bottom" constant="20" id="fyP-3Z-orW"/>
+                            <constraint firstItem="s1m-zE-Q8A" firstAttribute="centerX" secondItem="OOh-Rr-fXW" secondAttribute="centerX" id="jWh-Fs-gru"/>
                             <constraint firstItem="8qh-yy-lQa" firstAttribute="top" secondItem="blp-i1-hNa" secondAttribute="bottom" constant="20" id="p7C-pX-FlO"/>
                         </constraints>
                     </view>
@@ -102,6 +111,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="8qh-yy-lQa" id="T9V-Ig-de8"/>
+                        <outlet property="deleteButton" destination="s1m-zE-Q8A" id="JLp-vJ-63w"/>
                         <outlet property="gameimageView" destination="Aq6-LD-oLp" id="78I-7X-aLF"/>
                         <outlet property="titleTextField" destination="blp-i1-hNa" id="YzP-7g-KUC"/>
                     </connections>
